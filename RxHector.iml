@@ -7,87 +7,15 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module-library" exported="">
-      <library>
-        <CLASSES>
-          <root url="jar://$USER_HOME$/Downloads/astyanax/astyanax-cassandra/build/libs/astyanax-cassandra-1.56.45-SNAPSHOT.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
-        <CLASSES>
-          <root url="jar://$USER_HOME$/Downloads/astyanax/astyanax-core/build/libs/astyanax-all-1.56.45-SNAPSHOT.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
-        <CLASSES>
-          <root url="jar://$USER_HOME$/Downloads/astyanax/astyanax-thrift/build/libs/astyanax-thrift-1.56.45-SNAPSHOT.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
-        <CLASSES>
-          <root url="jar://$USER_HOME$/Downloads/astyanax/astyanax-entity-mapper/build/libs/astyanax-entity-mapper-1.56.45-SNAPSHOT.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
-        <CLASSES>
-          <root url="jar://C:/Program Files (x86)/DataStax Community/apache-cassandra/lib/apache-cassandra-thrift-2.0.2.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
-        <CLASSES>
-          <root url="jar://C:/Program Files (x86)/DataStax Community/apache-cassandra/lib/thrift-server-0.3.2.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
-        <CLASSES>
-          <root url="jar://C:/Program Files (x86)/DataStax Community/apache-cassandra/lib/apache-cassandra-clientutil-2.0.2.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
-        <CLASSES>
-          <root url="jar://C:/Program Files (x86)/DataStax Community/apache-cassandra/lib/libthrift-0.9.1.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
-        <CLASSES>
-          <root url="jar://C:/Program Files (x86)/DataStax Community/apache-cassandra/lib/apache-cassandra-2.0.2.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
+    <orderEntry type="library" exported="" name="astyanax-cassandra-1.56.45-SNAPSHOT" level="project" />
+    <orderEntry type="library" exported="" name="astyanax-thrift-1.56.45-SNAPSHOT" level="project" />
+    <orderEntry type="library" exported="" name="astyanax-entity-mapper-1.56.45-SNAPSHOT" level="project" />
+    <orderEntry type="library" exported="" name="apache-cassandra-thrift-2.0.2" level="project" />
+    <orderEntry type="library" exported="" name="thrift-server-0.3.2" level="project" />
+    <orderEntry type="library" exported="" name="apache-cassandra-clientutil-2.0.2" level="project" />
+    <orderEntry type="library" exported="" name="libthrift-0.9.1" level="project" />
+    <orderEntry type="library" exported="" name="apache-cassandra-2.0.2" level="project" />
+    <orderEntry type="library" exported="" name="astyanax-all-1.56.45-SNAPSHOT" level="project" />
   </component>
 </module>
 

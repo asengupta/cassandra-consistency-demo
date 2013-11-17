@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="apache-cassandra-2.0.2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/apache-cassandra-2.0.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -2,7 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b3093611-3cc6-4ffb-bf27-86589b65ddcc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/InconsistentSessionClient.java" afterPath="$PROJECT_DIR$/src/InconsistentSessionClient.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/apache_cassandra_2_0_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/apache_cassandra_clientutil_2_0_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/apache_cassandra_thrift_2_0_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/astyanax_all_1_56_45_SNAPSHOT.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/astyanax_cassandra_1_56_45_SNAPSHOT.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/astyanax_entity_mapper_1_56_45_SNAPSHOT.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/astyanax_thrift_1_56_45_SNAPSHOT.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/libthrift_0_9_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/thrift_server_0_3_2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RxHector.iml" afterPath="$PROJECT_DIR$/RxHector.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="RxHector.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -77,7 +87,7 @@
       <file leaf-file-name="InconsistentSessionClient.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/InconsistentSessionClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="47" selection-start="2390" selection-end="2390" vertical-scroll-proportion="0.33170733">
+            <state line="22" column="13" selection-start="1034" selection-end="1034" vertical-scroll-proportion="0.2552204">
               <folding />
             </state>
           </provider>
@@ -92,28 +102,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ColumnListMutation.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/Downloads/astyanax/astyanax-cassandra/build/libs/astyanax-cassandra-1.56.45-SNAPSHOT.jar!/com/netflix/astyanax/ColumnListMutation.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="0" selection-start="3307" selection-end="3307" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ConsistentSessionClient.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ConsistentSessionClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="81" column="12" selection-start="3506" selection-end="3506" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ColumnFamily.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/Downloads/astyanax/astyanax-cassandra/build/libs/astyanax-cassandra-1.56.45-SNAPSHOT.jar!/com/netflix/astyanax/model/ColumnFamily.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="28" selection-start="184" selection-end="184" vertical-scroll-proportion="0.0">
+            <state line="130" column="5" selection-start="5653" selection-end="5653" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -132,15 +124,6 @@
         <entry file="file://$PROJECT_DIR$/src/Session.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StringSerializer.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/Downloads/astyanax/astyanax-cassandra/build/libs/astyanax-cassandra-1.56.45-SNAPSHOT.jar!/com/netflix/astyanax/serializers/StringSerializer.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="83" selection-start="245" selection-end="245" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -490,7 +473,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24967825" sideWeight="0.67224544" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32775453" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32775453" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -570,52 +553,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/Downloads/astyanax/astyanax-cassandra/build/libs/astyanax-cassandra-1.56.45-SNAPSHOT.jar!/com/netflix/astyanax/impl/AstyanaxConfigurationImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="0" selection-start="3192" selection-end="3192" vertical-scroll-proportion="-10.28" />
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/Downloads/astyanax/astyanax-core/build/libs/astyanax-all-1.56.45-SNAPSHOT.jar!/com/netflix/astyanax/connectionpool/impl/OperationResultImpl.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="13" selection-start="747" selection-end="747" vertical-scroll-proportion="-14.92" />
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/Downloads/astyanax/astyanax-cassandra/build/libs/astyanax-cassandra-1.56.45-SNAPSHOT.jar!/com/netflix/astyanax/query/RowQuery.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="423" selection-end="423" vertical-scroll-proportion="-8.8" />
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/Downloads/astyanax/astyanax-core/build/libs/astyanax-all-1.56.45-SNAPSHOT.jar!/com/netflix/astyanax/Execution.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="57" selection-start="241" selection-end="241" vertical-scroll-proportion="-5.28">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Downloads/astyanax/astyanax-cassandra/build/libs/astyanax-cassandra-1.56.45-SNAPSHOT.jar!/com/netflix/astyanax/MutationBatch.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="53" selection-start="291" selection-end="291" vertical-scroll-proportion="-5.28">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Downloads/astyanax/astyanax-cassandra/build/libs/astyanax-cassandra-1.56.45-SNAPSHOT.jar!/com/netflix/astyanax/serializers/StringSerializer.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="83" selection-start="245" selection-end="245" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Downloads/astyanax/astyanax-cassandra/build/libs/astyanax-cassandra-1.56.45-SNAPSHOT.jar!/com/netflix/astyanax/model/ColumnFamily.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="28" selection-start="184" selection-end="184" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Downloads/astyanax/astyanax-cassandra/build/libs/astyanax-cassandra-1.56.45-SNAPSHOT.jar!/com/netflix/astyanax/ColumnListMutation.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="0" selection-start="3307" selection-end="3307" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -657,14 +602,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ConsistentSessionClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="12" selection-start="3506" selection-end="3506" vertical-scroll-proportion="0.0">
+        <state line="130" column="5" selection-start="5653" selection-end="5653" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/InconsistentSessionClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="47" selection-start="2390" selection-end="2390" vertical-scroll-proportion="0.33170733">
+        <state line="22" column="13" selection-start="1034" selection-end="1034" vertical-scroll-proportion="0.2552204">
           <folding />
         </state>
       </provider>

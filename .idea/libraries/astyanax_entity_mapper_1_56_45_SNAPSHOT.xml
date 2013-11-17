@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="astyanax-entity-mapper-1.56.45-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/astyanax-entity-mapper-1.56.45-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
