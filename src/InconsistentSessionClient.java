@@ -14,9 +14,10 @@ import com.netflix.astyanax.query.ColumnFamilyQuery;
 import com.netflix.astyanax.serializers.StringSerializer;
 import com.netflix.astyanax.thrift.ThriftFamilyFactory;
 
+import java.util.Random;
 import java.util.UUID;
 
-public class AstClient {
+public class InconsistentSessionClient {
   private Keyspace keyspace;
   private AstyanaxContext<Keyspace> context;
   private ColumnFamily<String, String> EMP_CF;
@@ -55,10 +56,14 @@ public class AstClient {
   public Session primitiveUpdate(String sessionid, int version, boolean updateVersionNumber) {
     version = updateVersionNumber ? version + 1 : version;
     OperationResult<Void> result = null;
-    MutationBatch m = keyspace.prepareMutationBatch();
+    long randomSkew = (long) (new Random().nextDouble() * 1);
+    MutationBatch m = keyspace.prepareMutationBatch()
+        .withConsistencyLevel(ConsistencyLevel.CL_QUORUM)
+        .withTimestamp(System.currentTimeMillis() + randomSkew);
     try {
-        m.withRow(EMP_CF, sessionid)
-//            .putColumn("sessionid", sessionid, null)
+
+//      System.out.println("Random skew is " + randomSkew);
+      m.withRow(EMP_CF, sessionid)
             .putColumn("version", version, null);
         result = m.execute();
         return new Session(sessionid, version);
@@ -87,7 +92,7 @@ public class AstClient {
     OperationResult<ColumnList<String>> result;
     try {
       ColumnFamilyQuery<String, String> query = keyspace.prepareQuery(EMP_CF);
-      query.setConsistencyLevel(ConsistencyLevel.CL_ONE);
+      query.setConsistencyLevel(ConsistencyLevel.CL_QUORUM);
       result = query
           .getKey(sessionid)
           .execute();
@@ -105,7 +110,7 @@ public class AstClient {
   }
 
   public static void main(String[] args) throws Exception {
-    AstClient c = new AstClient();
+    InconsistentSessionClient c = new InconsistentSessionClient();
     String randomID = UUID.randomUUID().toString();
     c.init();
     c.put(new Session(randomID, 0));
