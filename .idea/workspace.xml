@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b3093611-3cc6-4ffb-bf27-86589b65ddcc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ConsistentSessionClient.java" afterPath="$PROJECT_DIR$/src/ConsistentSessionClient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/InconsistentSessionClient.java" afterPath="$PROJECT_DIR$/src/InconsistentSessionClient.java" />
-    </list>
+    <list default="true" id="b3093611-3cc6-4ffb-bf27-86589b65ddcc" name="Default" comment="" />
     <ignored path="RxHector.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/HectorTest.java" changelist="b3093611-3cc6-4ffb-bf27-86589b65ddcc" time="1384636400521" ignored="false" />
@@ -78,7 +75,7 @@
       <file leaf-file-name="InconsistentSessionClient.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/InconsistentSessionClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="40" selection-start="2342" selection-end="2342" vertical-scroll-proportion="0.0">
+            <state line="69" column="0" selection-start="2806" selection-end="2806" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -113,10 +110,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConsistentSessionClient.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ConsistentSessionClient.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ConsistentSessionClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="29" selection-start="2742" selection-end="2742" vertical-scroll-proportion="0.47743466">
+            <state line="67" column="0" selection-start="2846" selection-end="2846" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -145,25 +142,16 @@
       <file leaf-file-name="Session.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Session.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="17" selection-start="17" selection-end="17" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConsistentSession.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="ConsistentSession.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ConsistentSession.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="4" selection-start="388" selection-end="388" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MutationBatch.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/Downloads/astyanax/astyanax-cassandra/build/libs/astyanax-cassandra-1.56.45-SNAPSHOT.jar!/com/netflix/astyanax/MutationBatch.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="53" selection-start="291" selection-end="291" vertical-scroll-proportion="-5.28">
+            <state line="21" column="4" selection-start="388" selection-end="388" vertical-scroll-proportion="0.08755761">
               <folding />
             </state>
           </provider>
@@ -265,6 +253,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RxHector" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RxHector" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value=".idea" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -612,13 +614,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Session.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="17" selection-start="17" selection-end="17" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/Downloads/astyanax/astyanax-cassandra/build/libs/astyanax-cassandra-1.56.45-SNAPSHOT.jar!/com/netflix/astyanax/ColumnListMutation.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="69" column="0" selection-start="3307" selection-end="3307" vertical-scroll-proportion="-14.08">
@@ -633,13 +628,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ConsistentSession.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="4" selection-start="388" selection-end="388" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.7.0_15/src.zip!/java/lang/Math.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="689" column="7" selection-start="27617" selection-end="27617" vertical-scroll-proportion="0.0">
@@ -647,21 +635,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/InconsistentSessionClient.java">
+    <entry file="file://$PROJECT_DIR$/src/ConsistentSessionClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="40" selection-start="2342" selection-end="2342" vertical-scroll-proportion="0.0">
+        <state line="67" column="0" selection-start="2846" selection-end="2846" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ConsistentSessionClient.java">
+    <entry file="file://$PROJECT_DIR$/src/InconsistentSessionClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="29" selection-start="2742" selection-end="2742" vertical-scroll-proportion="0.47743466">
+        <state line="69" column="0" selection-start="2806" selection-end="2806" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Session.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/gradle.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ConsistentSession.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="4" selection-start="388" selection-end="388" vertical-scroll-proportion="0.08755761">
+          <folding />
         </state>
       </provider>
     </entry>
