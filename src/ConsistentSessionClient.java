@@ -60,7 +60,7 @@ public class ConsistentSessionClient {
     version = updateVersionNumber ? version + 1 : version;
 //    System.out.println("Updated version to " + version);
     OperationResult<Void> result = null;
-    long randomSkew = (long) (Math.random() * 300);
+    long randomSkew = (long) (Math.random() * 3000);
     MutationBatch m = keyspace.prepareMutationBatch()
         .withConsistencyLevel(ConsistencyLevel.CL_QUORUM)
         .withTimestamp(System.currentTimeMillis() + randomSkew);
@@ -88,9 +88,9 @@ public class ConsistentSessionClient {
 
   public ConsistentSession read(String sessionid) {
     ConsistentSession read = primitiveRead(sessionid);
-    return primitiveUpdate(sessionid, read.getVersion(), read.getData());
-//    read.setVersion(read.getVersion() + 1);
-//    return read;
+    primitiveUpdate(sessionid, read.getVersion(), read.getData());
+    read.setVersion(read.getVersion() + 1);
+    return read;
   }
 
   public ConsistentSession primitiveRead(String sessionid) {
@@ -129,6 +129,7 @@ public class ConsistentSessionClient {
       System.out.println((innerRead.getVersion()) + " == " + expectedVersionAfterRead + "?");
       if ((innerRead.getVersion()) != expectedVersionAfterRead) throw new Exception("Reproduced");
     }
+    System.out.println("Finished for ID " + randomID);
   }
 
   private ConsistentSession put(ConsistentSession session) {
