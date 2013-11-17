@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b3093611-3cc6-4ffb-bf27-86589b65ddcc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ConsistentSession.java" />
-      <change type="MOVED" beforePath="C:\Projects\RxHector\src\AstClient.java" afterPath="$PROJECT_DIR$/src/ConsistentSessionClient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ConsistentSessionClient.java" afterPath="$PROJECT_DIR$/src/ConsistentSessionClient.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/InconsistentSessionClient.java" afterPath="$PROJECT_DIR$/src/InconsistentSessionClient.java" />
     </list>
     <ignored path="RxHector.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/HectorTest.java" changelist="b3093611-3cc6-4ffb-bf27-86589b65ddcc" time="1384636400521" ignored="false" />
-    <file path="/AstClient.java" changelist="b3093611-3cc6-4ffb-bf27-86589b65ddcc" time="1384672557722" ignored="false" />
+    <file path="/AstClient.java" changelist="b3093611-3cc6-4ffb-bf27-86589b65ddcc" time="1384674033215" ignored="false" />
     <file path="/Session.java" changelist="b3093611-3cc6-4ffb-bf27-86589b65ddcc" time="1384664787569" ignored="false" />
     <file path="/Dummy.txt" changelist="b3093611-3cc6-4ffb-bf27-86589b65ddcc" time="1384657513995" ignored="false" />
     <file path="/fragment.java" changelist="b3093611-3cc6-4ffb-bf27-86589b65ddcc" time="1384664825089" ignored="false" />
@@ -76,13 +75,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="InconsistentSessionClient.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="InconsistentSessionClient.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/InconsistentSessionClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="0" selection-start="2653" selection-end="2653" vertical-scroll-proportion="0.84792626">
+            <state line="57" column="40" selection-start="2342" selection-end="2342" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Math.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.7.0_15/src.zip!/java/lang/Math.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="689" column="7" selection-start="27617" selection-end="27617" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -105,10 +113,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConsistentSessionClient.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="ConsistentSessionClient.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ConsistentSessionClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="126" column="20" selection-start="5380" selection-end="5380" vertical-scroll-proportion="0.0">
+            <state line="64" column="29" selection-start="2742" selection-end="2742" vertical-scroll-proportion="0.47743466">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -129,15 +137,6 @@
         <entry file="jar://$USER_HOME$/Downloads/astyanax/astyanax-cassandra/build/libs/astyanax-cassandra-1.56.45-SNAPSHOT.jar!/com/netflix/astyanax/model/ColumnFamily.class">
           <provider selected="true" editor-type-id="text-editor">
             <state line="6" column="28" selection-start="184" selection-end="184" vertical-scroll-proportion="-4.4">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Execution.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/Downloads/astyanax/astyanax-core/build/libs/astyanax-all-1.56.45-SNAPSHOT.jar!/com/netflix/astyanax/Execution.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="57" selection-start="241" selection-end="241" vertical-scroll-proportion="-5.28">
               <folding />
             </state>
           </provider>
@@ -195,8 +194,8 @@
         <option value="$PROJECT_DIR$/src/ConsistentSession/Session.java" />
         <option value="$PROJECT_DIR$/src/Session.java" />
         <option value="$PROJECT_DIR$/src/ConsistentSession.java" />
-        <option value="$PROJECT_DIR$/src/ConsistentSessionClient.java" />
         <option value="$PROJECT_DIR$/src/InconsistentSessionClient.java" />
+        <option value="$PROJECT_DIR$/src/ConsistentSessionClient.java" />
       </list>
     </option>
   </component>
@@ -302,7 +301,7 @@
       <recent name="ConsistentSession" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.InconsistentSessionClient">
+  <component name="RunManager" selected="Application.ConsistentSessionClient">
     <configuration default="false" name="InconsistentSessionClient" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="InconsistentSessionClient" />
@@ -434,8 +433,8 @@
     </list>
     <recent_temporary>
       <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Application.InconsistentSessionClient" />
-        <item index="1" class="java.lang.String" itemvalue="Application.ConsistentSessionClient" />
+        <item index="0" class="java.lang.String" itemvalue="Application.ConsistentSessionClient" />
+        <item index="1" class="java.lang.String" itemvalue="Application.InconsistentSessionClient" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -491,7 +490,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24967825" sideWeight="0.67085075" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32914925" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32914925" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -641,18 +640,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ConsistentSessionClient.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_15/src.zip!/java/lang/Math.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="126" column="20" selection-start="5380" selection-end="5380" vertical-scroll-proportion="0.0">
+        <state line="689" column="7" selection-start="27617" selection-end="27617" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/InconsistentSessionClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="40" selection-start="2342" selection-end="2342" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/InconsistentSessionClient.java">
+    <entry file="file://$PROJECT_DIR$/src/ConsistentSessionClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="0" selection-start="2653" selection-end="2653" vertical-scroll-proportion="0.84792626">
+        <state line="64" column="29" selection-start="2742" selection-end="2742" vertical-scroll-proportion="0.47743466">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

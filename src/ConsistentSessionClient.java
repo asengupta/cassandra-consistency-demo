@@ -60,7 +60,7 @@ public class ConsistentSessionClient {
     version = updateVersionNumber ? version + 1 : version;
 //    System.out.println("Updated version to " + version);
     OperationResult<Void> result = null;
-    long randomSkew = (long) (new Random().nextDouble() * 40);
+    long randomSkew = (long) (Math.random() * 300);
     MutationBatch m = keyspace.prepareMutationBatch()
         .withConsistencyLevel(ConsistencyLevel.CL_QUORUM)
         .withTimestamp(System.currentTimeMillis() + randomSkew);
