@@ -56,7 +56,7 @@ public class InconsistentSessionClient {
   public Session primitiveUpdate(String sessionid, int version, boolean updateVersionNumber) {
     version = updateVersionNumber ? version + 1 : version;
     OperationResult<Void> result = null;
-    long randomSkew = (long) (Math.random() * 100);
+    long randomSkew = (long) (Math.random() * 2);
     MutationBatch m = keyspace.prepareMutationBatch()
         .withConsistencyLevel(ConsistencyLevel.CL_QUORUM)
         .withTimestamp(System.currentTimeMillis() + randomSkew);
