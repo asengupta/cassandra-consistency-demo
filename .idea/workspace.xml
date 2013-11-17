@@ -3,14 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="b3093611-3cc6-4ffb-bf27-86589b65ddcc" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AstClient.java" afterPath="$PROJECT_DIR$/src/AstClient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Session.java" afterPath="$PROJECT_DIR$/src/Session.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="RxHector.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/HectorTest.java" changelist="b3093611-3cc6-4ffb-bf27-86589b65ddcc" time="1384636400521" ignored="false" />
-    <file path="/AstClient.java" changelist="b3093611-3cc6-4ffb-bf27-86589b65ddcc" time="1384658022852" ignored="false" />
+    <file path="/AstClient.java" changelist="b3093611-3cc6-4ffb-bf27-86589b65ddcc" time="1384658835481" ignored="false" />
     <file path="/Session.java" changelist="b3093611-3cc6-4ffb-bf27-86589b65ddcc" time="1384657701569" ignored="false" />
     <file path="/Dummy.txt" changelist="b3093611-3cc6-4ffb-bf27-86589b65ddcc" time="1384657513995" ignored="false" />
     <file path="/fragment.java" changelist="b3093611-3cc6-4ffb-bf27-86589b65ddcc" time="1384657633427" ignored="false" />
@@ -77,7 +74,7 @@
       <file leaf-file-name="AstClient.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/AstClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="125" column="0" selection-start="4717" selection-end="4717" vertical-scroll-proportion="0.4387755">
+            <state line="125" column="0" selection-start="4637" selection-end="4637" vertical-scroll-proportion="0.4524887">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -535,7 +532,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AstClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="125" column="0" selection-start="4717" selection-end="4717" vertical-scroll-proportion="0.4387755">
+        <state line="125" column="0" selection-start="4637" selection-end="4637" vertical-scroll-proportion="0.4524887">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

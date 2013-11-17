@@ -7,7 +7,6 @@ import com.netflix.astyanax.connectionpool.exceptions.ConnectionException;
 import com.netflix.astyanax.connectionpool.impl.ConnectionPoolConfigurationImpl;
 import com.netflix.astyanax.connectionpool.impl.CountingConnectionPoolMonitor;
 import com.netflix.astyanax.impl.AstyanaxConfigurationImpl;
-import com.netflix.astyanax.model.Column;
 import com.netflix.astyanax.model.ColumnFamily;
 import com.netflix.astyanax.model.ColumnList;
 import com.netflix.astyanax.model.ConsistencyLevel;
@@ -59,7 +58,7 @@ public class AstClient {
     MutationBatch m = keyspace.prepareMutationBatch();
     try {
         m.withRow(EMP_CF, sessionid)
-            .putColumn("sessionid", sessionid, null)
+//            .putColumn("sessionid", sessionid, null)
             .putColumn("version", version, null);
         result = m.execute();
         return new Session(sessionid, version);
@@ -95,7 +94,7 @@ public class AstClient {
 
       ColumnList<String> cols = result.getResult();
 
-      Session session = new Session(cols.getColumnByName("sessionid").getStringValue(), cols.getColumnByName("version").getIntegerValue());
+      Session session = new Session(sessionid, cols.getColumnByName("version").getIntegerValue());
       return session;
     } catch (ConnectionException e) {
       System.out.println("failed to read from C*");
@@ -127,6 +126,5 @@ public class AstClient {
 //create column family session
 //with comparator=UTF8Type
 //and column_metadata = [
-//    {column_name: sessionid, validation_class: UTF8Type}
 //    {column_name: version, validation_class: IntegerType}
 //    ];
