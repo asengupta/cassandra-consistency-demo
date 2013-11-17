@@ -12,17 +12,15 @@ import com.netflix.astyanax.model.ColumnFamily;
 import com.netflix.astyanax.model.ColumnList;
 import com.netflix.astyanax.model.ConsistencyLevel;
 import com.netflix.astyanax.query.ColumnFamilyQuery;
-import com.netflix.astyanax.serializers.IntegerSerializer;
 import com.netflix.astyanax.serializers.StringSerializer;
 import com.netflix.astyanax.thrift.ThriftFamilyFactory;
 
-import java.util.Date;
-import java.util.Random;
+import java.util.UUID;
 
 public class AstClient {
   private Keyspace keyspace;
   private AstyanaxContext<Keyspace> context;
-  private ColumnFamily<Integer, String> EMP_CF;
+  private ColumnFamily<String, String> EMP_CF;
 
   public void init() {
     context = new AstyanaxContext.Builder()
@@ -46,27 +44,25 @@ public class AstClient {
     keyspace = context.getEntity();
 
     EMP_CF = ColumnFamily.newColumnFamily(
-        "employees2",
-        IntegerSerializer.get(),
+        "session",
+        StringSerializer.get(),
         StringSerializer.get());
   }
 
-  public Session primitiveUpdate(int empId, int deptId, String lastName) {
-    return primitiveUpdate(empId, deptId, lastName, true);
+  public Session primitiveUpdate(String sessionid, int version) {
+    return primitiveUpdate(sessionid, version, true);
   }
 
-  public Session primitiveUpdate(int empId, int deptId, String lastName, boolean updateVersionNumber) {
-    deptId = updateVersionNumber ? deptId + 1 : deptId;
+  public Session primitiveUpdate(String sessionid, int version, boolean updateVersionNumber) {
+    version = updateVersionNumber ? version + 1 : version;
     OperationResult<Void> result = null;
     MutationBatch m = keyspace.prepareMutationBatch();
     try {
-        m.withRow(EMP_CF, empId)
-            .putColumn("empid", empId, null)
-            .putColumn("deptid", deptId, null)
-            .putColumn("first_name", new Date().toString(), null)
-            .putColumn("last_name", lastName, null);
+        m.withRow(EMP_CF, sessionid)
+            .putColumn("sessionid", sessionid, null)
+            .putColumn("version", version, null);
         result = m.execute();
-        return new Session(empId, deptId, new Date().toString(), lastName);
+        return new Session(sessionid, version);
     } catch (ConnectionException e) {
       System.out.println("failed to write data");
       throw new RuntimeException("failed to write data to C*", e);
@@ -74,34 +70,32 @@ public class AstClient {
   }
 
   private Session update(Session read) {
-    Session existingSession = primitiveRead(read.getEmpid());
-    if (read.getDeptid() == existingSession.getDeptid()) {
-      return primitiveUpdate(existingSession.getEmpid(), existingSession.getDeptid(), existingSession.getLast_name());
+    Session existingSession = primitiveRead(read.getSessionid());
+    if (read.getVersion() == existingSession.getVersion()) {
+      return primitiveUpdate(existingSession.getSessionid(), existingSession.getVersion());
     } else {
       throw new IllegalStateException("Version conflict");
     }
   }
 
-  public Session read(int empId) {
-    Session read = primitiveRead(empId);
-    primitiveUpdate(empId, read.getDeptid(), "Cartman", false);
+  public Session read(String sessionid) {
+    Session read = primitiveRead(sessionid);
+    primitiveUpdate(sessionid, read.getVersion(), false);
     return read;
   }
 
-  public Session primitiveRead(int empId) {
+  public Session primitiveRead(String sessionid) {
     OperationResult<ColumnList<String>> result;
     try {
-      ColumnFamilyQuery<Integer, String> query = keyspace.prepareQuery(EMP_CF);
+      ColumnFamilyQuery<String, String> query = keyspace.prepareQuery(EMP_CF);
       query.setConsistencyLevel(ConsistencyLevel.CL_ONE);
       result = query
-          .getKey(empId)
+          .getKey(sessionid)
           .execute();
 
       ColumnList<String> cols = result.getResult();
 
-      Column<String> first_name = cols.getColumnByName("first_name");
-      String firstNameData = first_name == null ? "NONE" : first_name.getStringValue();
-      Session session = new Session(cols.getColumnByName("empid").getIntegerValue(), cols.getColumnByName("deptid").getIntegerValue(), firstNameData, cols.getColumnByName("last_name").getStringValue());
+      Session session = new Session(cols.getColumnByName("sessionid").getStringValue(), cols.getColumnByName("version").getIntegerValue());
       return session;
     } catch (ConnectionException e) {
       System.out.println("failed to read from C*");
@@ -113,36 +107,26 @@ public class AstClient {
 
   public static void main(String[] args) throws Exception {
     AstClient c = new AstClient();
-    int randomID = new Random().nextInt(13);
+    String randomID = UUID.randomUUID().toString();
     c.init();
-    c.put(new Session(randomID, 0, new Date().toString(), "Cartman"));
+    c.put(new Session(randomID, 0));
     for (int i = 0; i <= 10000; ++i) {
       Session innerRead = c.read(randomID);
       Session writtenSession = c.update(innerRead);
       innerRead = c.read(randomID);
-      System.out.println(innerRead.getDeptid() + " == " + writtenSession.getDeptid() + "?");
-      if (innerRead.getDeptid() != writtenSession.getDeptid()) throw new Exception("Reproduced");
+      System.out.println(innerRead.getVersion() + " == " + writtenSession.getVersion() + "?");
+      if (innerRead.getVersion() != writtenSession.getVersion()) throw new Exception("Reproduced");
     }
   }
 
   private void put(Session session) {
-    primitiveUpdate(session.getEmpid(), session.getDeptid(), "Cartman");
+    primitiveUpdate(session.getSessionid(), session.getVersion());
   }
 }
-//create column family employees2
-//with comparator=UTF8Type
-//and column_metadata = [
-//    {column_name: empid, validation_class: IntegerType}
-//    {column_name: deptid, validation_class: IntegerType}
-//    {column_name: first_name, validation_class: UTF8Type}
-//    {column_name: last_name, validation_class: UTF8Type}
-//    ];
 
 //create column family session
 //with comparator=UTF8Type
 //and column_metadata = [
 //    {column_name: sessionid, validation_class: UTF8Type}
 //    {column_name: version, validation_class: IntegerType}
-//    {column_name: first_name, validation_class: UTF8Type}
-//    {column_name: last_name, validation_class: UTF8Type}
 //    ];

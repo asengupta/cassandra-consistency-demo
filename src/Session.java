@@ -1,32 +1,20 @@
 public class Session {
 
-  private final int empid;
-  private final int deptid;
-  private final String first_name;
-  private final String last_name;
+  private final String sessionid;
+  private final int version;
 
-  public int getEmpid() {
-    return empid;
+  public String getSessionid() {
+    return sessionid;
   }
 
-  public int getDeptid() {
-    return deptid;
+  public int getVersion() {
+    return version;
   }
 
-  public String getFirst_name() {
-    return first_name;
-  }
+  public Session(String sessionid, int version) {
 
-  public String getLast_name() {
-    return last_name;
-  }
-
-  public Session(int empid, int deptid, String first_name, String last_name) {
-
-    this.empid = empid;
-    this.deptid = deptid;
-    this.first_name = first_name;
-    this.last_name = last_name;
+    this.sessionid = sessionid;
+    this.version = version;
 
   }
 }
